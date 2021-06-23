@@ -1,9 +1,12 @@
 package model.application;
 
+import model.boardgame.Position;
+
 public class Program {
 
     public static void main(String[] args) {
 
-        System.out.println("Commit inicial!");
+        Position pos = new Position(3,5);
+        System.out.println(pos);
     }
 }
