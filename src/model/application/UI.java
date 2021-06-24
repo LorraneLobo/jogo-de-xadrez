@@ -1,5 +1,6 @@
 package model.application;
 
+import model.chess.ChessMatch;
 import model.chess.ChessPiece;
 import model.chess.ChessPosition;
 import model.chess.Color;
@@ -45,6 +46,13 @@ public class UI {
         } catch (RuntimeException e){
             throw new InputMismatchException("Erro ao ler ChessPosition. Valores válidos de a1 a h8.");
         }
+    }
+
+    public static void printMatch(ChessMatch chessMatch){
+        printBoard(chessMatch.getPieces());
+        System.out.println();
+        System.out.println("Turno: " + chessMatch.getTurn());
+        System.out.println("Aguardando jogador: " + chessMatch.getCurrentPlayer());
     }
 
     public static void printBoard(ChessPiece[][] pieces){
